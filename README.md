@@ -1,4 +1,15 @@
 # My React Boilerplate
+consist of 
+- webpack
+- webpack-dev-server
+- path
+- babel-loader
+- babel-core
+- babel-preset-es2015
+- babel-preset-react
+- html-webpack-plugin
+- react
+- react-dom
 
 ## Step by Step
 - npm init
@@ -123,3 +134,36 @@ module.exports = {
 }
 ```
 - npm start //try to start the set-up
+
+## Adding React
+- npm install react react-dom
+- after finish set-up the environment, create Components folder inside ./client and create file App.js inside folder Components
+- inside App.jsx, start creating the first component
+```
+inside ./Components/App.js
+
+import react, {Component} from 'react'
+
+class App extends Component{
+  render(){
+    return(
+      <div>
+        <h1>Hello world</h1>
+      </div>
+    )
+  }
+}
+
+export default App
+```
+-update file ./client/index.js
+```
+import React, {Component} from 'react'
+import ReactDOM from 'react-dom'
+import App from './Components/App'
+
+ReactDOM.render(<App/>, document.getElementById('root'))
+```
+- npm start
+
+### finish the set-up
